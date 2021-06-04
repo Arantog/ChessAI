@@ -4,8 +4,6 @@ import com.chess.engine.BoardUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +12,7 @@ import static com.chess.engine.BoardUtils.NUM_TILES;
 public class Table {
     private final JFrame gameFrame;
     private final BoardPanel boardPanel;
+    ImageIcon icon = new ImageIcon("src/main/resources/icon.png");
     private static Dimension WINDOW_DIMENSION = new Dimension(720, 720);
     private static Dimension BOARD_DIMENSION = new Dimension(400, 350);
     private static Dimension TILE_DIMENSION = new Dimension(10, 10);
@@ -23,6 +22,7 @@ public class Table {
     public Table() {
         this.gameFrame = new JFrame("Chess");
         final JMenuBar tableMenuBar = createTableMenuBar();
+        this.gameFrame.setIconImage(icon.getImage());
         this.gameFrame.setLayout(new BorderLayout());
         this.gameFrame.setJMenuBar(tableMenuBar);
         this.gameFrame.setVisible(true);
