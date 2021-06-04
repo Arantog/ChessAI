@@ -1,6 +1,7 @@
 package com.chess.gui;
 
 import com.chess.engine.BoardUtils;
+import jdk.dynalink.Operation;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +23,7 @@ public class Table {
     public Table() {
         this.gameFrame = new JFrame("Chess");
         final JMenuBar tableMenuBar = createTableMenuBar();
+        this.gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.gameFrame.setIconImage(icon.getImage());
         this.gameFrame.setLayout(new BorderLayout());
         this.gameFrame.setJMenuBar(tableMenuBar);
