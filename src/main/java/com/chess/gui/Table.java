@@ -31,7 +31,7 @@ public class Table {
         openPGN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("opening PGN file");                     //TODO
+                System.out.println("opening PGN file");
             }
         });
         fileMenu.add(openPGN);
