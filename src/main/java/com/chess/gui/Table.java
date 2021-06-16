@@ -1,10 +1,12 @@
 package com.chess.gui;
 
 import com.chess.engine.BoardUtils;
-import jdk.dynalink.Operation;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,17 +76,23 @@ public class Table {
                 assignTileColor();
                 validate();
             }
+            /*private void setupPieceIcon(){
+                this.removeAll();
+                if(board.getTile(this.tileId).isTileOccupied()){
+                    final BufferedImage image = ImageIO.read(new File(pieceIconPath+));
+                }
+            }*/
 
             private void assignTileColor() {
-                if (BoardUtils.FIRST_ROW.get(this.tileId) ||
-                        BoardUtils.THIRD_ROW.get(this.tileId) ||
-                        BoardUtils.FIFTH_ROW.get(this.tileId) ||
-                        BoardUtils.SEVENTH_ROW.get(this.tileId)) {
-                    setBackground(this.tileId % 2 == 0 ? lightTileColor : darkTileColor);
-                } else if(BoardUtils.SECOND_ROW.get(this.tileId) ||
+                if (BoardUtils.EIGHTH_ROW.get(this.tileId) ||
+                        BoardUtils.SIXTH_ROW.get(this.tileId) ||
                         BoardUtils.FOURTH_ROW.get(this.tileId) ||
-                        BoardUtils.SIXTH_ROW.get(this.tileId)  ||
-                        BoardUtils.EIGHTH_ROW.get(this.tileId)) {
+                        BoardUtils.SECOND_ROW.get(this.tileId)) {
+                    setBackground(this.tileId % 2 == 0 ? lightTileColor : darkTileColor);
+                } else if(BoardUtils.SEVENTH_ROW.get(this.tileId) ||
+                        BoardUtils.FIFTH_ROW.get(this.tileId) ||
+                        BoardUtils.THIRD_ROW.get(this.tileId)  ||
+                        BoardUtils.FIRST_ROW.get(this.tileId)) {
                     setBackground(this.tileId % 2 != 0 ? lightTileColor : darkTileColor);
                 }
 

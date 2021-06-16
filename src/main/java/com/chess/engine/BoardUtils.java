@@ -13,14 +13,15 @@ public class BoardUtils {
     public final List<Boolean> SIXTH_COLUMN = initColumn(5);
     public final List<Boolean> SEVENTH_COLUMN = initColumn(6);
     public final List<Boolean> EIGHTH_COLUMN = initColumn(7);
-    public static final List<Boolean> FIRST_ROW = initRow(0);
-    public static final List<Boolean> SECOND_ROW = initRow(8);
-    public static final List<Boolean> THIRD_ROW = initRow(16);
-    public static final List<Boolean> FOURTH_ROW = initRow(24);
-    public static final List<Boolean> FIFTH_ROW = initRow(32);
-    public static final List<Boolean> SIXTH_ROW = initRow(40);
-    public static final List<Boolean> SEVENTH_ROW = initRow(48);
-    public static final List<Boolean> EIGHTH_ROW = initRow(56);
+
+    public static final List<Boolean> EIGHTH_ROW = initRow(0);
+    public static final List<Boolean> SEVENTH_ROW = initRow(8);
+    public static final List<Boolean> SIXTH_ROW = initRow(16);
+    public static final List<Boolean> FIFTH_ROW = initRow(24);
+    public static final List<Boolean> FOURTH_ROW = initRow(32);
+    public static final List<Boolean> THIRD_ROW = initRow(40);
+    public static final List<Boolean> SECOND_ROW = initRow(48);
+    public static final List<Boolean> FIRST_ROW = initRow(56);
     public static final int START_TILE_INDEX = 0;
     public static final int NUM_TILES_PER_ROW = 8;
     public static final int NUM_TILES = 64;
